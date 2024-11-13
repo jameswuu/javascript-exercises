@@ -5,6 +5,9 @@ const reverseString = function(strings) {
         reverse_string += strings[i];
     }
     return reverse_string;
+
+    // Alternative Solution:
+    // return strings.split("").reverse().join("")
 };
 
 // Do not edit below this line
