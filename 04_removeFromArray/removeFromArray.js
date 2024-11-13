@@ -1,8 +1,8 @@
 const removeFromArray = function(array, word) {
     let new_array = [];
-    for (let i = 0; i < length(num); i++) {
+    for (let i = 0; i < array.length; i++) {
         if (word != array[i]) {
-            new_array.push(array(i));
+            new_array.push(array[i]);
         }
     }
     return new_array;
