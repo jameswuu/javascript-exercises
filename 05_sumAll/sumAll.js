@@ -1,4 +1,12 @@
 const sumAll = function(num1, num2) {
+    
+    // To Validate the input
+    if ( !Number.isInteger(num1) || !Number.isInteger(num2) ){
+        return "ERROR";
+    } else if (num1 < 0 || num2 < 0) {
+        return "ERROR";
+    }
+
     let difference = num1 - num2;
     let sum = 0;
     if (difference > 0){
