@@ -1,5 +1,6 @@
 const fibonacci = function(num) {
-    if (num >= 0) {
+    
+    if (parseInt(num) >= 0) {
         // Initialize the beginning of the function
         let array = [0,1];
 
@@ -14,7 +15,9 @@ const fibonacci = function(num) {
 
         // Return the answer
         return(array[num]);
-    } 
+    } else {
+        return("OOPS");
+    }
 
 };
 
