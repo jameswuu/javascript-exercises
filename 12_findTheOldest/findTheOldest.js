@@ -1,23 +1,26 @@
 const findTheOldest = function(people) {
     // Inialize varables
-    let currentYear = date();
-    let oldestPerson = '';
-    let oldestAge = null;
+    const currentYear = new Date().getFullYear();
+    let oldestPerson = null;
+    let oldestAge = -1;
 
     // Use loop to go throught each person
     for (let person of people){
         let currentAge;
-        if (person.yearofDeath) {
-            currentAge = person.yearofDeath - yearofBirth
+
+        // Calculate the current age 
+        if (person.yearOfDeath) {
+            // For deceased person
+            currentAge = person.yearOfDeath - person.yearOfBirth
         } else {
-            currentAge = currentYear - yearOfBirth;
+            // For living person 
+            currentAge = currentYear - person.yearOfBirth;
         }
     
         // Compare the oldest one with the current one
-        if (currentAge >= oldestAge || oldestAge != null) {
-            oldestPerson = person.name;
-        } else {
+        if (currentAge > oldestAge) {
             oldestAge = currentAge;
+            oldestPerson = person;
         }
     }
     return oldestPerson;
